@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://biom8ofaqpodx"]
 
 [ext_resource type="Script" uid="uid://ta1jk0vsaigv" path="res://scripts/handui.gd" id="1_ut8mq"]
-[ext_resource type="PackedScene" uid="uid://8j5k03edvxq1" path="res://scenes/control.tscn" id="2_dh0rk"]
+[ext_resource type="PackedScene" uid="uid://8j5k03edvxq1" path="res://scenes/CardView.tscn" id="2_dh0rk"]
 
 [node name="HandUI" type="HBoxContainer" unique_id=1350436979]
 anchors_preset = 15
@@ -9,5 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 2
 script = ExtResource("1_ut8mq")
 card_view_scene = ExtResource("2_dh0rk")

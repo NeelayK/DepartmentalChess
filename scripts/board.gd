@@ -438,7 +438,7 @@ func try_move(from: Vector2i, to: Vector2i) -> bool:
 	pieces[to] = piece
 	
 	# castling rook move
-	if piece.type == Piece.PieceType.KING and abs(to.x - from.x) == 2:
+	if piece.type == Piece.PieceType.KING and is_king_in_check(piece.is_white) and abs(to.x - from.x) == 2:
 		var y := from.y
 
 		if to.x == 6: # king side

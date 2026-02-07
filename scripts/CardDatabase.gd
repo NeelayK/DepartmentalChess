@@ -4,7 +4,7 @@ class_name CardDatabase
 static func make_test_deck() -> Array[Card]:
 	var deck: Array[Card] = []
 
-	for i in 6:
+	for i in 5:
 		var c := Card.new()
 		c.name = "Gain 2 AP"
 		c.description = "Gain 2 Action Points"
