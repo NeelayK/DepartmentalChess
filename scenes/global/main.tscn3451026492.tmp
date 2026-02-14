@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://boq56jxchnc08" path="res://scripts/global/main.gd" id="1_ij8q7"]
 [ext_resource type="PackedScene" uid="uid://ugret1efjjyf" path="res://scenes/chess/board.tscn" id="2_tu3op"]
 [ext_resource type="Script" uid="uid://daakisrfcra7f" path="res://scenes/global/hand_area.gd" id="3_ij8q7"]
+[ext_resource type="Script" uid="uid://btgfnqde6xqmn" path="res://cards/game.gd" id="3_ochve"]
 [ext_resource type="Script" uid="uid://ine8tn367s0h" path="res://cards/deck_ui.gd" id="4_vweqv"]
 [ext_resource type="PackedScene" uid="uid://csh1qj40iflw5" path="res://cards/card_tooltip.tscn" id="5_bmkni"]
 [ext_resource type="Script" uid="uid://bl0b7v5gowvd1" path="res://cards/cardManager.gd" id="6_bmkni"]
@@ -19,6 +20,7 @@
 script = ExtResource("1_ij8q7")
 
 [node name="Game" type="Node" parent="." unique_id=167137096]
+script = ExtResource("3_ochve")
 
 [node name="UI" type="Control" parent="Game" unique_id=7360081]
 layout_mode = 3
@@ -59,7 +61,6 @@ offset_top = 140.30762
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/separation = 4
 
 [node name="PlayButton" type="Button" parent="Game/UI" unique_id=585455640]
 layout_mode = 0
@@ -70,7 +71,6 @@ offset_bottom = 562.8462
 text = "Play Cards"
 
 [node name="CardTooltip" parent="Game/UI" unique_id=1468053264 instance=ExtResource("5_bmkni")]
-z_index = 100
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

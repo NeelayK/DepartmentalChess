@@ -7,6 +7,16 @@ extends Node2D
 @export var board_width := 8
 @export var board_height := 8
 @export var square_size := 64
+var chess_enabled := false
+var current_player := 0
+
+func set_active_player(index: int):
+	current_player = index
+	chess_enabled = true
+
+func disable_chess():
+	chess_enabled = false
+
 
 var white_turn := true
 var selected_square := Vector2i(-1, -1)

@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://boq56jxchnc08" path="res://scripts/global/main.gd" id="1_ij8q7"]
 [ext_resource type="PackedScene" uid="uid://ugret1efjjyf" path="res://scenes/chess/board.tscn" id="2_tu3op"]
 [ext_resource type="Script" uid="uid://daakisrfcra7f" path="res://scenes/global/hand_area.gd" id="3_ij8q7"]
-[ext_resource type="Script" uid="uid://ine8tn367s0h" path="res://cards/deck_ui.gd" id="4_vweqv"]
+[ext_resource type="Script" uid="uid://btgfnqde6xqmn" path="res://cards/game.gd" id="3_ochve"]
+[ext_resource type="Script" uid="uid://ine8tn367s0h" path="res://cards/ui.gd" id="4_vweqv"]
 [ext_resource type="PackedScene" uid="uid://csh1qj40iflw5" path="res://cards/card_tooltip.tscn" id="5_bmkni"]
+[ext_resource type="Script" uid="uid://bkb11q6qygknp" path="res://cards/player_state.gd" id="5_vweqv"]
 [ext_resource type="Script" uid="uid://bl0b7v5gowvd1" path="res://cards/cardManager.gd" id="6_bmkni"]
-[ext_resource type="PackedScene" uid="uid://1wwuyeyncsya" path="res://scenes/global/player_state.tscn" id="6_oin8k"]
 [ext_resource type="Script" uid="uid://dnyevbqjrjs62" path="res://cards/data/card_data.gd" id="7_oin8k"]
 [ext_resource type="Resource" uid="uid://cli6x8d4o1gcc" path="res://cards/data/ap2_card.tres" id="8_6v4jp"]
 [ext_resource type="Resource" uid="uid://dt6as65my5bya" path="res://cards/data/ap1_card.tres" id="9_3meve"]
@@ -18,23 +19,25 @@
 [node name="Main" type="Node2D" unique_id=638754456]
 script = ExtResource("1_ij8q7")
 
+[node name="BoardRoot" parent="." unique_id=1859345595 instance=ExtResource("2_tu3op")]
+position = Vector2(683, 384)
+
 [node name="Game" type="Node" parent="." unique_id=167137096]
+script = ExtResource("3_ochve")
 
 [node name="UI" type="Control" parent="Game" unique_id=7360081]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1357.0
 offset_bottom = 761.0
-mouse_filter = 2
 script = ExtResource("4_vweqv")
 
-[node name="CurrentPlayerLabel" type="Label" parent="Game/UI" unique_id=663647420]
+[node name="PlayedHand" type="HBoxContainer" parent="Game/UI" unique_id=430147147]
 layout_mode = 0
-offset_left = 553.4357
-offset_top = 18.707687
-offset_right = 712.4357
-offset_bottom = 41.707687
-text = "Current Player Label"
+offset_left = 31.0
+offset_top = 258.0
+offset_right = 398.0
+offset_bottom = 417.0
 
 [node name="HandArea" type="Control" parent="Game/UI" unique_id=477041258]
 clip_contents = true
@@ -43,8 +46,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 14.030762
-offset_top = 420.45514
-offset_right = -29.620605
+offset_top = 590.3833
+offset_right = -651.651
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -55,53 +58,31 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 140.30762
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-theme_override_constants/separation = 4
 
 [node name="PlayButton" type="Button" parent="Game/UI" unique_id=585455640]
 layout_mode = 0
-offset_left = 27.118256
-offset_top = 507.1693
-offset_right = 267.21057
-offset_bottom = 562.8462
-text = "Play Cards"
+offset_left = 936.0
+offset_top = 582.0
+offset_right = 1134.0
+offset_bottom = 633.0
 
 [node name="CardTooltip" parent="Game/UI" unique_id=1468053264 instance=ExtResource("5_bmkni")]
-z_index = 100
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -619.6594
-offset_top = -45.64612
-offset_right = -399.90945
-offset_bottom = 64.35388
+offset_left = -109.875
+offset_top = -55.0
+offset_right = 109.875
+offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AP_2" type="Label" parent="Game/UI" unique_id=1238130564]
-layout_mode = 0
-offset_left = 1283.261
-offset_top = 224.6257
-offset_right = 1323.261
-offset_bottom = 247.6257
-text = "AP: 0"
-
-[node name="PlayedHand_2" type="HBoxContainer" parent="Game/UI" unique_id=1446505572]
-layout_mode = 0
-offset_left = 943.1125
-offset_top = 253.3898
-offset_right = 1349.0869
-offset_bottom = 460.718
-mouse_filter = 2
-alignment = 2
-
-[node name="AP_1" type="Label" parent="Game/UI" unique_id=1770931026]
+[node name="APLabel" type="Label" parent="Game/UI" unique_id=1770931026]
 layout_mode = 0
 offset_left = 50.0
 offset_top = 223.0
@@ -109,17 +90,8 @@ offset_right = 90.0
 offset_bottom = 246.0
 text = "AP: 0"
 
-[node name="PlayedHand_1" type="HBoxContainer" parent="Game/UI" unique_id=430147147]
-layout_mode = 0
-offset_left = 21.646149
-offset_top = 251.7641
-offset_right = 427.6205
-offset_bottom = 459.0923
-mouse_filter = 2
-
-[node name="Player1" parent="Game" unique_id=269668933 instance=ExtResource("6_oin8k")]
-
-[node name="Player2" parent="Game" unique_id=288271447 instance=ExtResource("6_oin8k")]
+[node name="PlayerState" type="Node" parent="Game" unique_id=1521174681]
+script = ExtResource("5_vweqv")
 
 [node name="CardManager" type="Node" parent="Game" unique_id=226081287]
 script = ExtResource("6_bmkni")
@@ -127,6 +99,3 @@ card_pool = Array[ExtResource("7_oin8k")]([ExtResource("8_6v4jp"), ExtResource("
 
 [node name="RoundManager" type="Node" parent="Game" unique_id=1946545820]
 script = ExtResource("13_64pog")
-
-[node name="BoardRoot" parent="." unique_id=1859345595 instance=ExtResource("2_tu3op")]
-position = Vector2(683, 384)

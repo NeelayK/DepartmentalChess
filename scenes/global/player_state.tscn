@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://1wwuyeyncsya"]
+
+[ext_resource type="Script" uid="uid://bkb11q6qygknp" path="res://cards/player_state.gd" id="1_kyyo7"]
+
+[node name="PlayerState" type="Node" unique_id=269668933]
+script = ExtResource("1_kyyo7")
