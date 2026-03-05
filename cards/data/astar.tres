@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://chgwty5yr6dbi"]
+
+[ext_resource type="Texture2D" uid="uid://072qilti6qgg" path="res://cards/assets/cardBack_red2.png" id="1_b1711"]
+[ext_resource type="Texture2D" uid="uid://cqkx7pgnl3h7e" path="res://cards/assets/cardClubsK.png" id="2_r1he5"]
+[ext_resource type="Script" uid="uid://dnyevbqjrjs62" path="res://cards/data/card_data.gd" id="3_ql4ws"]
+
+[resource]
+script = ExtResource("3_ql4ws")
+card_name = "A Star"
+description = "Executes A Star ALgorithm"
+front_texture = ExtResource("2_r1he5")
+back_texture = ExtResource("1_b1711")
+ap_cost = 3
+card_type = 1
+algorithm_type = 3
+metadata/_custom_type_script = "uid://dnyevbqjrjs62"

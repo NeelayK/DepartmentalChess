@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bu2kxe01y4dpe"]
+
+[ext_resource type="Script" uid="uid://du6rqpu4nu5gu" path="res://scripts/chess/piece.gd" id="1_gebih"]
+[ext_resource type="Shader" uid="uid://nv5irmf1rjos" path="res://scenes/shaders/outline.gdshader" id="2_uxyxl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4gexp"]
+shader = ExtResource("2_uxyxl")
+shader_parameter/light_color = Color(0.83, 0, 0.141, 0.5)
+shader_parameter/shadow_color = Color(0, 0.22, 0.4, 0.5)
+shader_parameter/active = true
+
+[node name="Piece" type="Node2D" unique_id=70517092]
+script = ExtResource("1_gebih")
+
+[node name="Body" type="Sprite2D" parent="." unique_id=1562184759]
+material = SubResource("ShaderMaterial_4gexp")

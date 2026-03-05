@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cabl7b45od5nm"]
+
+[ext_resource type="Script" uid="uid://b7g2n51cn4sjd" path="res://scripts/chess/ui_panel.gd" id="1_sv14y"]
+
+[node name="UI_panel" type="VBoxContainer" unique_id=941911335]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1024.0
+offset_bottom = -450.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sv14y")
+
+[node name="Label" type="Label" parent="." unique_id=1990598931]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Rules"
+
+[node name="castling" type="CheckBox" parent="." unique_id=1111716395]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Castling"
+
+[node name="enpass" type="CheckBox" parent="." unique_id=748887354]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "En Croissant"
+
+[node name="check" type="CheckBox" parent="." unique_id=1509254702]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Check"
+
+[node name="showcheck" type="CheckBox" parent="." unique_id=623048088]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Show Check"
+
+[node name="king cap" type="CheckBox" parent="." unique_id=1078910621]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "King Capture"

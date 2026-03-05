@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://blqetwg5xvk74"]
+
+[ext_resource type="Texture2D" uid="uid://072qilti6qgg" path="res://cards/assets/cardBack_red2.png" id="1_wr6w4"]
+[ext_resource type="Texture2D" uid="uid://dwalwv1m4475j" path="res://cards/assets/cardClubsQ.png" id="2_wr6w4"]
+[ext_resource type="Script" uid="uid://dnyevbqjrjs62" path="res://cards/data/card_data.gd" id="3_k41px"]
+
+[resource]
+script = ExtResource("3_k41px")
+card_name = "Breadth First Search"
+description = "Executes BFS movement algorithm"
+front_texture = ExtResource("2_wr6w4")
+back_texture = ExtResource("1_wr6w4")
+ap_cost = 2
+card_type = 1
+algorithm_type = 1
+metadata/_custom_type_script = "uid://dnyevbqjrjs62"

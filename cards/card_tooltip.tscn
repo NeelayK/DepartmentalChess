@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://csh1qj40iflw5"]
+
+[ext_resource type="Script" uid="uid://drdisodaxpi2e" path="res://cards/card_tooltip.gd" id="1_607wc"]
+
+[node name="CardTooltip" type="Panel" unique_id=1468053264]
+z_index = 2
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_607wc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=830768405]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=3215180]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="VBoxContainer" unique_id=984918415]
+layout_mode = 2
+
+[node name="APLabel" type="Label" parent="VBoxContainer" unique_id=1538972568]
+layout_mode = 2

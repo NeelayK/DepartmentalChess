@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dt6as65my5bya"]
+
+[ext_resource type="Texture2D" uid="uid://t7ubkt7to068" path="res://cards/assets/cardBack_blue3.png" id="1_pkr71"]
+[ext_resource type="Texture2D" uid="uid://cncy0f6inngkj" path="res://cards/assets/cardClubsA.png" id="2_huryc"]
+[ext_resource type="Script" uid="uid://dnyevbqjrjs62" path="res://cards/data/card_data.gd" id="3_m7u4e"]
+
+[resource]
+script = ExtResource("3_m7u4e")
+card_name = "1 AP"
+description = "Gives 1 AP"
+front_texture = ExtResource("2_huryc")
+back_texture = ExtResource("1_pkr71")
+ap_gain = 1
+metadata/_custom_type_script = "uid://dnyevbqjrjs62"

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bkqbqjayk0i3k"]
+
+[ext_resource type="Script" uid="uid://sxi2ge5i2yxf" path="res://cards/card_ui.gd" id="1_kybpf"]
+
+[node name="CardUI" type="TextureButton" unique_id=800462961]
+custom_minimum_size = Vector2(120, 150)
+anchors_preset = -1
+offset_right = 20.0
+offset_bottom = 60.0
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_kybpf")
+metadata/_edit_use_anchors_ = true
