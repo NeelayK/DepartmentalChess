@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://c7v3ovow3lupi"]
+
+[ext_resource type="Script" uid="uid://btgfnqde6xqmn" path="res://cards/game.gd" id="1_3pv1o"]
+[ext_resource type="Script" uid="uid://bl0b7v5gowvd1" path="res://cards/cardManager.gd" id="2_yfygc"]
+[ext_resource type="Script" uid="uid://dnyevbqjrjs62" path="res://cards/data/card_data.gd" id="3_fiu6e"]
+[ext_resource type="Script" uid="uid://bdd31fqi5chcn" path="res://cards/roundManager.gd" id="3_v0mjr"]
+[ext_resource type="Script" uid="uid://ine8tn367s0h" path="res://cards/ui.gd" id="4_v0mjr"]
+[ext_resource type="Resource" uid="uid://cli6x8d4o1gcc" path="res://cards/data/ap2_card.tres" id="4_x2hoa"]
+[ext_resource type="Resource" uid="uid://dt6as65my5bya" path="res://cards/data/ap1_card.tres" id="5_10fnh"]
+[ext_resource type="Resource" uid="uid://c28ox7h1kgfc1" path="res://cards/data/ap3_card.tres" id="6_i0nlm"]
+[ext_resource type="Resource" uid="uid://blqetwg5xvk74" path="res://cards/data/bfs.tres" id="8_socgl"]
+[ext_resource type="PackedScene" uid="uid://csh1qj40iflw5" path="res://cards/card_tooltip.tscn" id="8_uxm5x"]
+[ext_resource type="Resource" uid="uid://bcfaaykye42pl" path="res://cards/data/dfs.tres" id="9_doxvd"]
+[ext_resource type="Script" uid="uid://bkb11q6qygknp" path="res://cards/player_state.gd" id="10_10fnh"]
+
+[node name="Game" type="Node" unique_id=167137096]
+script = ExtResource("1_3pv1o")
+
+[node name="PlayerState" type="Node" parent="." unique_id=1521174681]
+script = ExtResource("10_10fnh")
+
+[node name="CardManager" type="Node" parent="." unique_id=226081287]
+script = ExtResource("2_yfygc")
+card_pool = Array[ExtResource("3_fiu6e")]([ExtResource("4_x2hoa"), ExtResource("5_10fnh"), ExtResource("6_i0nlm"), ExtResource("8_socgl"), ExtResource("9_doxvd")])
+
+[node name="RoundManager" type="Node" parent="." unique_id=1946545820]
+script = ExtResource("3_v0mjr")
+
+[node name="UI" type="Control" parent="." unique_id=533220203]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1060.0
+offset_bottom = 161.0
+script = ExtResource("4_v0mjr")
+
+[node name="PlayedHand" type="HBoxContainer" parent="UI" unique_id=2043206502]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 258.0
+offset_right = 398.0
+offset_bottom = 417.0
+
+[node name="Hand" type="HBoxContainer" parent="UI" unique_id=379450514]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 465.0
+offset_right = 910.0
+offset_bottom = 624.0
+
+[node name="PlayButton" type="Button" parent="UI" unique_id=1863517977]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 582.0
+offset_right = 1134.0
+offset_bottom = 633.0
+
+[node name="CardTooltip" parent="UI" unique_id=1468053264 instance=ExtResource("8_uxm5x")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.875
+offset_top = -55.0
+offset_right = 109.875
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
