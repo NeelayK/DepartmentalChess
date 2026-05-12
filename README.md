@@ -8,6 +8,8 @@ This repository contains a **Godot-based experimental chess game** where classic
 
 Link: https://github.com/NeelayK/DepartmentalChess
 
+Assets and Intial Setup: https://www.youtube.com/@Godot-with-me
+
 ---
 
 ##  Status
