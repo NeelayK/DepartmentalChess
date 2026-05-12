@@ -1,4 +1,4 @@
-# ♟️ Departmental Chess
+#  Departmental Chess
 
 ## Chess with Search Algorithms as Game Mechanics
 
@@ -6,13 +6,13 @@ This repository contains a **Godot-based experimental chess game** where classic
 
 ⚠️ This project is a **learning-focused prototype** and is **not actively maintained**.
 
-🔗 Link: https://github.com/NeelayK/DepartmentalChess
+Link: https://github.com/NeelayK/DepartmentalChess
 
 ---
 
-## 📌 Status
+##  Status
 
-⚠️ **Prototype / Learning Project**
+ **Prototype / Learning Project**
 
 * Not actively maintained  
 * Built for experimentation and academic exploration  
@@ -20,7 +20,7 @@ This repository contains a **Godot-based experimental chess game** where classic
 
 ---
 
-## 📖 About This Project
+##  About This Project
 
 Departmental Chess reimagines traditional chess by integrating **traversal algorithms directly into gameplay**.
 
@@ -35,7 +35,7 @@ This transforms abstract computer science concepts into **interactive gameplay m
 
 ---
 
-## 🚀 Core Concept
+## Core Concept
 
 > “What if search algorithms were not behind the game… but *were the game*?”
 
@@ -53,27 +53,25 @@ These algorithms:
 
 ---
 
-## 🎮 Features
+##  Features
 
-* ♟️ Chess-based grid system (8×8 board)  
-* 🧠 Algorithm-driven movement system  
-* 🃏 Card-based mechanic to trigger algorithms  
-* 🎨 Real-time visualization of search traversal  
-* 👻 “Ghost nodes” showing explored paths  
-* ⏱️ Asynchronous animations using coroutines  
+* Chess-based grid system (8×8 board)  
+* Algorithm-driven movement system  
+* Card-based mechanic to trigger algorithms  
+* Real-time visualization of search traversal  
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * **Game Engine:** Godot  
 * **Language:** GDScript  
 
 ---
 
-## ⚙️ Gameplay Mechanics
+## Gameplay Mechanics
 
-### 🃏 Algorithm Cards
+### Algorithm Cards
 
 Each card represents a search strategy:
 
@@ -83,7 +81,7 @@ Each card represents a search strategy:
 
 ---
 
-### 🔍 BFS (Breadth-First Search)
+### BFS (Breadth-First Search)
 
 * Expands outward uniformly  
 * Finds the **closest enemy**  
@@ -91,7 +89,7 @@ Each card represents a search strategy:
 
 ---
 
-### 🔍 DFS (Depth-First Search)
+### DFS (Depth-First Search)
 
 * Explores deep paths first  
 * Can bypass nearby enemies  
@@ -99,25 +97,25 @@ Each card represents a search strategy:
 
 ---
 
-### ⭐ A* (Planned)
+### A*
 
 * Uses heuristics for optimal pathfinding  
 * Pieces capture closest piece to the king 
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 Since this is a prototype:
 
-* ❌ No main menu or full game loop  
-* ❌ No AI opponent  
-* ⚠️ UI and UX are minimal  
-* ⚠️ Some bugs related to state synchronization and visualization  
+*  No main menu or full game loop  
+*  No AI opponent  
+*  UI and UX are minimal  
+*  Some bugs related to state synchronization and visualization  
 
 ---
 
-## 🧩 Technical Highlights
+## Technical Highlights
 
 * **Asynchronous Visualization**
   * Algorithms run step-by-step using coroutines
@@ -133,7 +131,7 @@ Since this is a prototype:
 
 ---
 
-## 📂 Usage
+##  Usage
 
 You are free to:
 
@@ -141,13 +139,9 @@ You are free to:
 * Study how search algorithms can be gamified  
 * Use parts of the implementation in your own projects  
 
-However:
-
-❗ **Not suitable for production use**
-
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Neelay Kamat**  
 GitHub: https://github.com/NeelayK  
